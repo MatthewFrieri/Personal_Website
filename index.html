@@ -4,6 +4,44 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio</title>
+    <!-- css styles -->
+    <link rel="stylesheet" href="styles.css" />
   </head>
-  <body></body>
+  <body>
+    <header id="site-header">
+      <nav>
+        <ul>
+          <li>
+            <a
+              id="nav-home"
+              class="nav active"
+              onclick="setActive('nav-home')"
+              href=""
+              >Home</a
+            >
+          </li>
+          <li>
+            <a
+              id="nav-about"
+              class="nav"
+              onclick="setActive('nav-about')"
+              href=""
+              >About</a
+            >
+          </li>
+          <li>
+            <a
+              id="nav-contact"
+              class="nav"
+              onclick="setActive('nav-contact')"
+              href=""
+              >Contact</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <!-- javascript -->
+    <script src="app.js"></script>
+  </body>
 </html>
