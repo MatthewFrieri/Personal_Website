@@ -9,38 +9,47 @@
   </head>
   <body>
     <header id="site-header">
-      <nav>
-        <ul>
-          <li>
-            <a
-              id="nav-home"
-              class="nav active"
-              onclick="setActive('nav-home')"
-              href=""
-              >Home</a
-            >
-          </li>
-          <li>
-            <a
-              id="nav-about"
-              class="nav"
-              onclick="setActive('nav-about')"
-              href=""
-              >About</a
-            >
-          </li>
-          <li>
-            <a
-              id="nav-contact"
-              class="nav"
-              onclick="setActive('nav-contact')"
-              href=""
-              >Contact</a
-            >
-          </li>
-        </ul>
-      </nav>
+      <ul>
+        <li>
+          <a
+            id="nav-home"
+            class="active"
+            onclick="setActive('nav-home')"
+            href="#section-home"
+            >Home</a
+          >
+        </li>
+        <li>
+          <a
+            id="nav-about"
+            onclick="setActive('nav-about')"
+            href="#section-about"
+            >About</a
+          >
+        </li>
+        <li>
+          <a
+            id="nav-contact"
+            onclick="setActive('nav-contact')"
+            href="#section-contact"
+            >Contact</a
+          >
+        </li>
+      </ul>
     </header>
+    <section id="section-home">
+      <img src="Images/Parallax/sky_9.png" id="parallax_9" class="parallax" />
+      <img src="Images/Parallax/mtn_8.png" id="parallax_8" class="parallax" />
+      <img src="Images/Parallax/cloud_7.png" id="parallax_7" class="parallax" />
+      <img src="Images/Parallax/mtn_6.png" id="parallax_6" class="parallax" />
+      <img src="Images/Parallax/fog_5.png" id="parallax_5" class="parallax" />
+      <h1 id="name" class="parallax">Matthew Frieri</h1>
+      <img src="Images/Parallax/mtn_4.png" id="parallax_4" class="parallax" />
+      <img src="Images/Parallax/fog_3.png" id="parallax_3" class="parallax" />
+      <img src="Images/Parallax/hill_2.png" id="parallax_2" class="parallax" />
+      <img src="Images/Parallax/tree_1.png" id="parallax_1" class="parallax" />
+    </section>
+    <section id="section-about"></section>
     <!-- javascript -->
     <script src="app.js"></script>
   </body>

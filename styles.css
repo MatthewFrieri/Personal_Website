@@ -1,13 +1,30 @@
+:root {
+    --purple: #0a0b2b;
+    --dark-blue: #5A69C6;
+    --light-blue: #7F8FF2;
+    --sky-blue: #B2C9F5;
+    --fog-white: #ccdef9;
+}
+
 body {
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: rgb(210, 230, 255);
+    background-color: rgb(255, 255, 255);
     margin: 0;
 }
 
+
+/* HEADER */
+
 #site-header {
-    background-color: rgb(85, 85, 85);
+    background-color: var(--dark-blue);
+
+    /* display: none; */
     display: flex;
     justify-content: center;
+
+    position: fixed;
+    top: 0;
+    width: 100%;
 }
 
 #site-header li {
@@ -17,9 +34,41 @@ body {
 
 #site-header li a {
     text-decoration: none;
-    color: white;
+    color: var(--fog-white);
 }
 
 .active {
     color: red !important;
 }
+
+/* SECTIONS */
+
+#section-home {
+    background-color: rgb(0, 0, 0);
+    height: 100vh;
+    position: relative;
+    overflow-y: hidden;
+}
+#section-about {
+    background-color: var(--purple);
+    height: 2000px;
+}
+
+/* PARALLAX SCROLL */
+
+.parallax {
+    position: absolute;
+    left: 0;
+    width: 100%;
+}
+
+
+#name {
+    font-size: 5.5vw;
+    text-shadow: 0 3px 10px var(--fog-white);
+    color: var(--purple);
+    margin: 0;
+    top: 13vw;
+    text-align: center;
+}
+
