@@ -7,7 +7,7 @@
 }
 
 body {
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Anton';
     background-color: rgb(255, 255, 255);
     margin: 0;
 }
@@ -18,7 +18,6 @@ body {
 #site-header {
     background-color: var(--dark-blue);
 
-    /* display: none; */
     display: flex;
     justify-content: center;
 
@@ -44,8 +43,7 @@ body {
 /* SECTIONS */
 
 #section-home {
-    background-color: rgb(0, 0, 0);
-    height: 100vh;
+    height: calc(100vw * (1080/1920) - 10px);
     position: relative;
     overflow-y: hidden;
 }
@@ -56,19 +54,53 @@ body {
 
 /* PARALLAX SCROLL */
 
-.parallax {
+#section-home > * {
     position: absolute;
     left: 0;
     width: 100%;
 }
 
-
-#name {
-    font-size: 5.5vw;
-    text-shadow: 0 3px 10px var(--fog-white);
+#section-home h1 {
+    font-size: 9vw;
+    text-shadow: 0 0.3vw 0px var(--fog-white);
     color: var(--purple);
     margin: 0;
-    top: 13vw;
-    text-align: center;
+    text-align: center;    
 }
 
+#first-name {
+    top: 9vw;
+    left: -3vw;
+}
+
+#last-name {
+    top: 19vw;
+    left: -3.5vw;
+}
+
+
+#section-home p {
+    font-size: 1.5vw;
+    color: var(--light-blue);
+    margin: 0;
+    text-align: center;
+    width: 10vw;
+}
+
+#one {
+    top: 14vw;
+    left: 68vw;
+    rotate: -15.5deg;
+}
+
+#two {
+    top: 14.2vw;
+    left: 76.5vw;
+    rotate: 13deg;
+}
+
+#three {
+    top: 15.5vw;
+    left: 85vw;
+    rotate: 4deg;
+}
