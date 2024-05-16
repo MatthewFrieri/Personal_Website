@@ -4,11 +4,16 @@
     --light-blue: #7F8FF2;
     --sky-blue: #B2C9F5;
     --fog-white: #ccdef9;
+
+    --text-white: rgb(232, 220, 255);
+}
+
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
-    font-family: 'Anton';
-    background-color: rgb(255, 255, 255);
     margin: 0;
 }
 
@@ -43,6 +48,8 @@ body {
 /* SECTIONS */
 
 #section-home {
+    font-family: 'Anton';
+
     height: calc(100vw * (1080/1920) - 10px);
     position: relative;
     overflow-y: hidden;
@@ -50,9 +57,18 @@ body {
 #section-about {
     background-color: var(--purple);
     height: 2000px;
+
+    display: grid;
+    grid-template-columns: 30% 50% 20%;
+    grid-template-rows: 1fr;
+
+    color: var(--light-blue);
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+    padding-top: 150px;
 }
 
-/* PARALLAX SCROLL */
+/* PARALLAX SCROLL (HOME SECTION)*/
 
 #section-home > * {
     position: absolute;
@@ -78,7 +94,6 @@ body {
     left: -3.5vw;
 }
 
-
 #section-home p {
     font-size: 1.5vw;
     color: var(--light-blue);
@@ -103,4 +118,62 @@ body {
     top: 15.5vw;
     left: 85vw;
     rotate: 4deg;
+}
+
+#section-home a {
+    width: 100px;
+    top: 40vw;
+    left: calc(50% - 25px);
+    margin: 0;
+}
+
+#down-arrow {
+    color: var(--purple);
+}
+
+
+/* ABOUT SECTION */
+
+#avatar-container {
+    text-align: center;
+    padding-right: 2%;
+}
+
+#about-container {
+    padding-right: 10%;
+}
+
+#icon-container {  
+    width: 280px;
+    height: 280px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+
+    padding-top: 20px;
+}
+
+#section-about h3 {
+    color: var(--dark-blue);
+    font-size: 20px;
+}
+
+#section-about p {
+    color: var(--text-white);
+    font-size: 30px;
+}
+
+#avatar {
+    border-radius: 50%;
+    width: 400px;
+}
+
+#toolbox-container img {
+    width: 50px;
+    height: 50px;
+}
+
+.invert {
+    filter: invert(1);
 }
