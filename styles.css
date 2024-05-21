@@ -8,6 +8,9 @@
     --text-white: rgb(232, 220, 255);
 }
 
+::-webkit-scrollbar {
+    display: none;
+}
 
 html {
     scroll-behavior: smooth;
@@ -86,13 +89,10 @@ body {
 
 #first-name {
     top: 9vw;
-    /* left: -3vw; */
-    /* border: 1px red solid; */
 }
 
 #last-name {
     top: 20.5vw;
-    /* left: -3.5vw; */
 }
 
 #section-home p {
@@ -104,20 +104,20 @@ body {
 }
 
 #one {
-    top: 13.9vw;
-    left: 68.5vw;
+    top: 14.1vw;
+    left: 69vw;
     rotate: -15.5deg;
 }
 
 #two {
-    top: 14.2vw;
-    left: 75vw;
+    top: 14.3vw;
+    left: 75.5vw;
     rotate: 18deg;
 }
 
 #three {
-    top: 15.4vw;
-    left: 81.5vw;
+    top: 15.5vw;
+    left: 82vw;
     rotate: 4deg;
 }
 
