@@ -12,7 +12,12 @@ function setActive(id) {
 }
 
 
-// Parallax Scrolling
+// Variables
+let aboutSectionStart = window.innerWidth * (1080/1920) - 11;
+
+
+// Element references
+const header = document.getElementById('site-header');
 
 const firstName = document.getElementById('first-name');
 const lastName = document.getElementById('last-name');
@@ -33,26 +38,39 @@ const cloud_7 = document.getElementById('parallax-7');
 const mtn_8 = document.getElementById('parallax-8');
 const sky_9 = document.getElementById('parallax-9');
 
+
+window,addEventListener('resize', () => {
+    aboutSectionStart = window.innerWidth * (1080/1920) - 11;
+})
+
 window.addEventListener('scroll', () => {
-   const scrollY = window.scrollY;
+    const scrollY = window.scrollY;
 
-   firstName.style.marginTop = scrollY * 0.8 + 'px';
-   lastName.style.marginTop  = scrollY * 0.8 + 'px';
-   
-   slogan1.style.marginTop   = scrollY * 2   + 'px';
-   slogan2.style.marginTop   = scrollY * 2   + 'px';
-   slogan3.style.marginTop   = scrollY * 2   + 'px';
+    // Create the parallax effect    
+    firstName.style.marginTop = scrollY * 0.8 + 'px';
+    lastName.style.marginTop  = scrollY * 0.8 + 'px';
 
-   downArrow.style.marginTop = scrollY * 2   + 'px'; 
+    slogan1.style.marginTop   = scrollY * 2   + 'px';
+    slogan2.style.marginTop   = scrollY * 2   + 'px';
+    slogan3.style.marginTop   = scrollY * 2   + 'px';
 
-   sky_9.style.marginTop     = scrollY * 0.5 + 'px';
-   mtn_8.style.marginTop     = scrollY * 0.5 + 'px';
-   cloud_7.style.marginTop   = scrollY * 0.4 + 'px';
-   mtn_6.style.marginTop     = scrollY * 0.4 + 'px';
-   fog_5.style.marginTop     = scrollY * 1.2 + 'px';
-   mtn_4.style.marginTop     = scrollY * 0.3 + 'px';
-   fog_3.style.marginTop     = scrollY * 0.4 + 'px';
-   hill_2.style.marginTop    = scrollY * 0.1 + 'px';
-   trees_1.style.marginTop   = scrollY * 0   + 'px';
+    downArrow.style.marginTop = scrollY * 2   + 'px'; 
 
+    sky_9.style.marginTop     = scrollY * 0.5 + 'px';
+    mtn_8.style.marginTop     = scrollY * 0.5 + 'px';
+    cloud_7.style.marginTop   = scrollY * 0.4 + 'px';
+    mtn_6.style.marginTop     = scrollY * 0.4 + 'px';
+    fog_5.style.marginTop     = scrollY * 1.2 + 'px';
+    mtn_4.style.marginTop     = scrollY * 0.3 + 'px';
+    fog_3.style.marginTop     = scrollY * 0.4 + 'px';
+    hill_2.style.marginTop    = scrollY * 0.1 + 'px';
+    trees_1.style.marginTop   = scrollY * 0   + 'px';
+
+    // Toggle the header visibility 
+    if (scrollY > aboutSectionStart) {
+        header.classList.add('header-visible')
+    }
+    else {
+        header.classList.remove('header-visible')
+    }
 });
