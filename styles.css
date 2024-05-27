@@ -21,6 +21,7 @@ html {
 
 body {
     margin: 0;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 
@@ -36,6 +37,7 @@ body {
     top: 0;
     width: 100%;
 
+    visibility: hidden;
     opacity: 0;
     transition: opacity, 0.2s ease;
 }
@@ -55,6 +57,7 @@ body {
 }
 
 #site-header.header-visible {
+    visibility: visible;
     opacity: 1;
 }
 
@@ -76,7 +79,6 @@ body {
     grid-template-rows: 1fr;
 
     color: var(--light-blue);
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 
     padding-top: 150px;
 }

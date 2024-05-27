@@ -1,8 +1,5 @@
 function setActive(id) {
 
-    const siteHeader = document.getElementById('site-header');
-    const navItems = siteHeader.getElementsByTagName('a');
-
     for (let i = 0; i < navItems.length; i++) {
         navItems[i].classList.remove('active');
     }
@@ -17,7 +14,8 @@ let aboutSectionStart = window.innerWidth * (1080/1920) - 11;
 
 
 // Element references
-const header = document.getElementById('site-header');
+const siteHeader = document.getElementById('site-header');
+const navItems = siteHeader.getElementsByTagName('a');
 
 const firstName = document.getElementById('first-name');
 const lastName = document.getElementById('last-name');
@@ -68,9 +66,9 @@ window.addEventListener('scroll', () => {
 
     // Toggle the header visibility 
     if (scrollY > aboutSectionStart) {
-        header.classList.add('header-visible')
+        siteHeader.classList.add('header-visible')
     }
     else {
-        header.classList.remove('header-visible')
+        siteHeader.classList.remove('header-visible')
     }
 });
