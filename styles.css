@@ -28,8 +28,6 @@ body {
 
 #site-header {
     background-color: var(--hill-gray);
-    /* backdrop-filter: blur(10px); */
-    /* border-bottom: 1px solid black; */
 
     display: flex;
     justify-content: center;
