@@ -72,15 +72,24 @@ body {
 }
 #section-about {
     background-color: var(--purple);
-    height: 2000px;
+    height: 600px;
 
     display: grid;
     grid-template-columns: 30% 50% 20%;
     grid-template-rows: 1fr;
 
-    color: var(--light-blue);
-
     padding-top: 150px;
+}
+#section-projects {
+    background-color: var(--hill-gray);
+    height: 1000px;
+    color: var(--text-white);
+
+    margin: 0;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 
 /* HOME SECTION */
@@ -181,4 +190,65 @@ body {
 #toolkit-container img {
     width: 50px;
     height: 50px;
+}
+
+/* PROJECTS SECTION */
+
+#section-projects {
+
+    h1 {
+        font-size: 50px;
+        margin: 50px;
+    }
+
+    #card-container {
+        width: 90vw;
+    
+        display: flex;
+        justify-content: space-between;
+        
+        .card {
+            width: 800px;
+            height: 600px;
+            border-radius: 15px;
+            border: 1px solid var(--fog-white);
+
+            position: relative;
+
+            .video-container {
+                width: 800px;
+                height: 150px;
+                border-radius: 15px 15px 0 0;
+            
+                overflow: hidden;
+            }
+            
+            video {
+                width: 100%;
+            }
+
+            h3 {
+                font-size: 40px;
+                margin: 40px;
+            }
+
+            p {
+                font-size: 20px;
+                margin: 0 40px;
+            }
+
+            button {
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                border: 0;
+                
+                position: absolute;
+                bottom: 20px;
+                right: 20px;
+                
+                
+            }
+        }
+    }
 }
