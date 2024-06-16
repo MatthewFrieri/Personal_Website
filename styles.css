@@ -207,9 +207,11 @@ body {
         width: 90vw;
 
         display: flex;
-        justify-content: space-around;
+        justify-content: center;
         
         .card {
+            margin: 0 30px;
+            
             width: 800px;
             height: 600px;
             border-radius: 15px;
