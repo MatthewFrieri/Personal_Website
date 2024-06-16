@@ -1,13 +1,15 @@
+const cards = document.getElementsByClassName('card');
 const videos = document.querySelectorAll('video');
 
-videos.forEach((video) => {
+for (let i = 0; i < cards.length; i++) {
+    let card = cards[i];
+    let video = videos[i];
     
-    video.addEventListener('mouseenter', () => {
+    card.addEventListener('mouseenter', () => {
         video.play()
     })
 
-    video.addEventListener('mouseleave', () => {
+    card.addEventListener('mouseleave', () => {
         video.pause()
     })
-
-})
+}
