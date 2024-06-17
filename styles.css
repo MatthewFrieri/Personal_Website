@@ -215,13 +215,15 @@ body {
     .card-container {
         border: 1px red solid;
         margin: 2em 0;
+        width: 100vw;
 
         display: flex;
-        /* justify-content: center; */
+        justify-content: center;
         
         .card {
             margin: 0 30px;
             
+            max-width: 30%;
             width: 40em;
             height: 40em;
             border-radius: 10px;
