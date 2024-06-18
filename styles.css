@@ -6,8 +6,9 @@
     --sky-blue: #B2C9F5;
     --fog-white: #ccdef9;
 
-
-
+    --card-background: #27233b;
+    --card-background-hover: #47495f;
+    --link-blue: #181d9b;
     --text-white: rgb(232, 220, 255);
 }
 
@@ -42,6 +43,10 @@ body {
     transition: opacity, 0.2s ease;
 }
 
+#site-header ul {
+    padding: 0;
+}
+
 #site-header li {
     display: inline-block;
     margin: 0 20px;
@@ -49,10 +54,12 @@ body {
 
 #site-header li a {
     text-decoration: none;
+    transition: color 0.3s;
     color: var(--fog-white);
 }
 
 .active {
+    transition: color 0.3s;
     color: red !important;
 }
 
@@ -72,7 +79,7 @@ body {
 }
 #section-about {
     background-color: var(--purple);
-    min-height: 37em;
+    min-height: 36em;
 
     display: grid;
     grid-template-columns: 30% 50% 20%;
@@ -82,7 +89,7 @@ body {
 }
 #section-projects {
     background-color: var(--hill-gray);
-    height: 2000px;
+    min-height: 125em;
     color: var(--text-white);
 
     margin: 0;
@@ -209,66 +216,67 @@ body {
     h1 {
         font-size: 3rem;
         margin: 1em;
-        /* letter-spacing: 2px; */
     }
 
     .card-container {
-        border: 1px red solid;
         margin: 2em 0;
         width: 100vw;
 
         display: flex;
         justify-content: center;
         
+        .card:hover {
+            transition: all 0.3s;
+            box-shadow: black 0 0 30px;
+            border: 2px solid var(--card-background-hover);
+            background-color: var(--card-background-hover);
+        }
         .card {
-            margin: 0 30px;
-            
+            margin: 0 2em;
+
             max-width: 30%;
             width: 40em;
-            height: 40em;
+            min-height: 40em;
             border-radius: 10px;
-            border: 2px solid #b1b1be;
-            background-color: #b1b1be;
-            color: black;
+            border: 2px solid var(--card-background);
+            background-color: var(--card-background);
+
+            transition: box-shadow border background-color 0.3s;
+            box-shadow: black 0 0 15px;
+
+            color: rgb(255, 255, 255);
 
             position: relative;
 
-            .video-container {
-                width: 800px;
-                height: 200px;
-                border-radius: 10px 10px 0 0;
-            
-                overflow: hidden;
-            }
-            
             video {
                 width: 100%;
+                border-radius: 10px 10px 0 0;
             }
 
             h3 {
-                font-size: 40px;
-                margin: 40px;
+                font-size: 2.5rem;
+                margin: 1em;
             }
 
             p {
-                font-size: 20px;
-                margin: 0 40px;
+                font-size: 1.25rem;
+                margin: 0 2em;
             }
 
             .card-footer {
                 position: absolute;
-                bottom: 20px;
+                bottom: 1.25em;
                 width: 100%;
                 display: flex;
-                padding-left: 40px;
+                padding-left: 2.5em;
 
                 button {
                     width: fit-content;
-                    padding: 0 10px;
-                    height: 30px;
+                    padding: 0 0.7em;
+                    height: 2.5em;
                     border-radius: 5px;
                     border: 0;
-                    margin: 0 10px 0 0;
+                    margin: 0 0.7em 0 0;
                 }
 
                 .blue {
@@ -288,16 +296,18 @@ body {
             
             }
             .link {
-                width: 40px;
-                height: 40px;
-                border-radius: 50%;
-                border: 0;
+                margin: 0;
 
                 position: absolute;
-                right: 20px;
-                bottom: 20px;
+                right: 2.5em;
+                bottom: 1.5em;
 
+                text-decoration: none;
+                color: var(--link-blue);
                 cursor: pointer;
+            }
+            .link:hover {
+                text-decoration: underline;
             }
         }
     }

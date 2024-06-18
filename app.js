@@ -8,12 +8,9 @@ function setActive(id) {
     toBeActive.classList.add('active');
 }
 
-
-// Variables
-let aboutSectionStart = window.innerWidth * (1080/1920) - 11;
-
-
 // Element references
+const aboutSection = document.getElementById('section-about');
+
 const siteHeader = document.getElementById('site-header');
 const navItems = siteHeader.getElementsByTagName('a');
 
@@ -36,9 +33,14 @@ const cloud_7 = document.getElementById('parallax-7');
 const mtn_8 = document.getElementById('parallax-8');
 const sky_9 = document.getElementById('parallax-9');
 
+// Variables
+let aboutSectionStart = window.innerWidth * (1080/1920) - siteHeader.clientHeight;
+let projectSectionStart = aboutSectionStart + aboutSection.clientHeight * 0.7;
+
 
 window,addEventListener('resize', () => {
-    aboutSectionStart = window.innerWidth * (1080/1920) - 11;
+    aboutSectionStart = window.innerWidth * (1080/1920) - siteHeader.clientHeight;
+    projectSectionStart = aboutSectionStart + aboutSection.clientHeight * 0.7;
 })
 
 window.addEventListener('scroll', () => {
@@ -65,10 +67,17 @@ window.addEventListener('scroll', () => {
     trees_1.style.marginTop   = scrollY * 0   + 'px';
 
     // Toggle the header visibility 
-    if (scrollY > aboutSectionStart) {
+    if (scrollY > projectSectionStart) {
         siteHeader.classList.add('header-visible')
+        setActive('nav-projects')
+    }
+    
+    else if (scrollY > aboutSectionStart) {
+        siteHeader.classList.add('header-visible')
+        setActive('nav-about')
     }
     else {
         siteHeader.classList.remove('header-visible')
+        setActive('nav-home')
     }
 });
