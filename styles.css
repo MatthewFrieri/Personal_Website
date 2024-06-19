@@ -9,7 +9,7 @@
     --card-background: #1e1f42;
     --card-background-hover: #252647;
     --link-blue: #afb1ff;
-    --text-white: rgb(232, 220, 255);
+    --text-white: white;
 }
 
 ::-webkit-scrollbar {
@@ -185,6 +185,7 @@ body {
 #section-about p {
     color: var(--text-white);
     font-size: 1.875rem;
+    line-height: 1.3em;
     max-width: 50ch;
 
 }
@@ -229,7 +230,6 @@ body {
             min-height: 40em;
 
             border-radius: 10px;
-            color: white;
 
             transition: background-color 0.3s, box-shadow 0.3s;
             box-shadow: black 0 0 15px;
