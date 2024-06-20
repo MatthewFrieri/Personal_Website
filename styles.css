@@ -6,6 +6,7 @@
     --sky-blue: #B2C9F5;
     --fog-white: #ccdef9;
 
+    --footer-gray: gray;
     --card-background: #1e1f42;
     --card-background-hover: #252647;
     --link-blue: #afb1ff;
@@ -89,10 +90,10 @@ body {
 }
 #section-projects {
     background-color: #2d2f60;
-    min-height: 125em;
     color: var(--text-white);
 
     margin: 0;
+    padding-bottom: 5em;
 
     display: flex;
     align-items: center;
@@ -300,5 +301,35 @@ body {
                 text-decoration: underline;
             }
         }
+    }
+}
+
+/* FOOTER */
+
+footer {
+    height: 12em;
+    font-size: 1.3rem;
+    
+    background-color: var(--purple);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    p {
+        color: var(--footer-gray);
+        margin: 0 0.5rem;
+    }
+    i {
+        transition: color 0.2s;
+        color: var(--footer-gray);
+        margin: 0 0.5rem;
+    }
+    #resume {
+        text-decoration: underline;
+    }
+    i:hover, #resume:hover {
+        transition: color 0.2s;
+        color: white;
     }
 }
