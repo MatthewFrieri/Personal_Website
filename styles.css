@@ -159,10 +159,14 @@ body {
 
 /* ABOUT SECTION */
 
-#avatar-container {
+#profile-container {
     /* border: 1px red solid; */
     text-align: center;
     /* padding-right: 2%; */
+    aspect-ratio: 1;
+    
+    display: flex;
+    justify-content: center;
 }
 
 #about-container {
@@ -198,10 +202,24 @@ body {
 
 }
 
-#avatar {
+#profile-fit-container {
+    /* border: 1px solid green; */
     border-radius: 50%;
-    width: 25em;
+    width: 20em;
+    height: 20em;
     max-width: 75%;
+    max-height: 75%;
+    overflow: hidden;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#profile {
+    width: 30em;
+    max-width: 150%;
+    padding-right: 3%;
 }
 
 #toolkit-container img {
