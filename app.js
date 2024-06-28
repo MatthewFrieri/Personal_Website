@@ -9,7 +9,7 @@ function setActive(id) {
 }
 
 // Element references
-const aboutSection = document.getElementById('section-about');
+const aboutSection = document.getElementById('about');
 
 const siteHeader = document.getElementById('site-header');
 const navItems = siteHeader.getElementsByTagName('a');
