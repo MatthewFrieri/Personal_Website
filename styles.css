@@ -80,7 +80,7 @@ body {
 }
 #about {
     background-color: var(--purple);
-    min-height: 36em;
+    min-height: 31em;
 
     display: grid;
     grid-template-columns: 30% 50% 20%;
@@ -161,11 +161,6 @@ body {
 /* ABOUT SECTION */
 
 #profile-container {
-    /* border: 1px red solid; */
-    text-align: center;
-    /* padding-right: 2%; */
-    aspect-ratio: 1;
-    
     display: flex;
     justify-content: center;
 }
@@ -197,24 +192,12 @@ body {
 
 }
 
-#profile-fit-container {
-    /* border: 1px solid green; */
-    border-radius: 50%;
+#profile {
     width: 20em;
     height: 20em;
-    max-width: 75%;
-    max-height: 75%;
-    overflow: hidden;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#profile {
-    width: 30em;
-    max-width: 150%;
-    padding-right: 3%;
+    max-width: 30vw;
+    max-height: 30vw;
+    border-radius: 50%;
 }
 
 #toolkit-container img {
